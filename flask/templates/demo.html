@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>echarts</title>
+    <script type="text/javascript" src="../static/js/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 800px;height: 600px;"></div>
+  <script type="text/javascript">
+        var myChart=echarts.init(document.getElementById("main"))
+        var option = {
+        title: {
+            text:'成绩表',
+                left:'center'
+        },
+        tooltip: {
+        trigger:'axis',
+        axisPointer:{
+        type:'shadow'
+            }
+        },
+        toolbox:{
+        show:true,
+        feature:{
+            mark:{show:true},
+            dataView:{show:true,readOnly:false},
+            magicType:{show:true,type:['line','bar']},
+            restore:{show:true},
+            saveAsImage:{show:true},
+            dataZoom:{show:true}
+            }
+        },
+        xAxis: {
+            data:['江涛','张磊','王华','刘志','李琳','易萍'],
+            name:'姓名',
+            nameLocation:'center',
+            nameGap:35
+        },
+        yAxis: {
+            name:'成绩',
+            nameLocation:'center',
+            nameGap:40
+        },
+series:[
+            {
+                name:'第一学期',
+                type:'bar',
+                data:[73,81,88,58,76,96]
+            },
+            {
+                name:'第二学期',
+                type:'bar',
+                data:[89,55,85,92,82,94]
+            },
+         
+     
+        ]
+        };
+        myChart.setOption(option);
+</script></body>
+</html>

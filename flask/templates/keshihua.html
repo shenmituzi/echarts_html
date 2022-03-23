@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>数据可视化</title>
+<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../static/js/echarts.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Seen Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='http://fonts.useso.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Fugaz+One' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../static/css/flexslider.css" type="text/css" media="screen" />
+<script src="../static/js/js/jquery-1.11.1.min.js"></script>
+<script src="../static/js/js/responsiveslides.min.js"></script>
+<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+
+  </script>
+
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="../static/js/js/move-top.js"></script>
+<script type="text/javascript" src="../static/js/js/easing.js"></script>
+ <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!---End-smoth-scrolling---->
+<script src="../static/js/js/bootstrap.js"></script>
+</head>
+<body>
+<!-- header -->
+<div class="header" id="home">
+			<div class="clearfix"></div>
+			<div class="container">
+	   <div class="header-bottom">
+		<div class="header-bottom">
+	   <nav class="navbar navbar-default">
+							<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+									  </button>
+									<div class="navbar-brand">
+										<h1><a href="index.html">书语</a></h1>
+									</div>
+								</div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							  <ul class="nav navbar-nav">
+									<li><a href="/index">首页 <span class="sr-only">(current)</span></a></li>
+									<li class="dropdown active">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">书香<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="/book/ciyun">词云展示</a></li>
+									<li><a  href="/book/keshihua">数据可视化</a></li>
+								</ul>
+
+									</li>
+									<li><a href="/book">藏书阁</a></li>
+									<li ><a href="/poem">枕上诗书</a></li>
+									<li><a href="/better">闲处好</a></li>
+								</ul>
+
+							</div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+						</nav>
+
+					</div>
+	</div>
+
+	</div>
+</div>
+	<div class="features-section">
+			<div class="container">
+				<h3>echarts展示</h3>
+                <div id="main" style="background-color:beige; margin-left: 200px; margin-top: 30px; width:800px;height:500px ;">
+				
+				</div>
+				<div class="features-grids">
+								<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-section">
+					<div class="container">
+						<div class="footer-left">
+							<p>书中自有黄金屋.<a target="_blank" href="#">毕业设计</a></p>
+						</div>
+							<div class="bottom-menu">
+								<ul>
+										<li><a href="/index" >首页</a></li>
+								<li><a href="/" class="active">书香</a></li>
+									<li><a href="/book">藏书阁</a></li>
+
+									<li><a href="/poem">枕上诗书</a></li>
+									<li><a href="/better">闲处好</a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+							<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear'
+					 		};
+							*/
+
+							$().UItoTop({ easingType: 'easeOutQuart' });
+
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+				</div>
+				</div>
+
+
+				<script type="text/javascript">
+				var myChart=echarts.init(document.getElementById("main"))
+				 var option = {
+					        title: {
+					            text:'豆瓣评分表',
+<!--					            subtext:'2005050324杜美壮',-->
+					                left:'center'
+					        },
+					        tooltip: {
+					        trigger:'axis',
+					        axisPointer:{
+					        type:'shadow'
+					            }
+					        },
+					        toolbox:{
+					        show:true,
+					        feature:{
+					            mark:{show:true},
+					            dataView:{show:true,readOnly:false},
+					            magicType:{show:true,type:['line','bar','pie']},
+					            restore:{show:true},
+					            saveAsImage:{show:true},
+					            dataZoom:{show:true}
+					            }
+					        },
+					        xAxis: {
+<!--					列表的数据是字符串  需要 tojson 转换一下-->
+					            data:{{score|tojson}},
+					            name:'豆瓣书评',
+					            nameLocation:'center',
+					            nameGap:35
+					        },
+					        yAxis: {
+					            name:'分数',
+					            nameLocation:'center',
+					            nameGap:40
+					        },
+					series:[
+					            {
+					                name:'评价人数',
+					                type:'bar',
+					                data:{{num}}
+					            },
+					 
+					        ]
+					        };
+				myChart.setOption(option);
+					</script>
+					
+
+
+</body>
+</html>
+
+
+

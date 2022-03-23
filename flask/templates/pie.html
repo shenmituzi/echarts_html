@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/js/echarts.min.js"></script>
+    <title>Title</title>
+    <style>
+      div{
+        float: left;
+      }
+    </style>
+</head>
+<body>
+<div id="main" style="width: 500px; height: 500px;"></div>
+
+
+</body>
+
+<script type="text/javascript">
+		var myChart = echarts.init(document.getElementById('main'));
+		var option = {
+			title: {
+				text: '2016-2021年家用电器销量情况',
+				subtext: '杜美壮 2005050324',
+				left: 'center'
+			},
+			tooltip: {
+				trigger: 'item',
+				formatter: '{a} <br/>{b} : {c} ({d}%)'
+			},
+			legend: {
+				orient: 'vertical',
+				left: 'left',
+				data: ['冰箱','洗衣机','电脑','电视','饮水机']
+			},
+			toolbox: {
+				show: true,
+				feature :{
+					mark : {show:true},
+					dataView: {show:true,readOnly:false},
+					magicType: {show:true,type:['line','bar']},
+					restore:{show:true},
+					saveAsImage:{show:true}
+				}
+			},
+			series: [
+				{
+					nameLocation: '2016年销量情况',
+					name: '销量',
+					type: 'pie',
+					radius: '20%',
+					center: ['20%','30%'],
+					data: [
+						{value: 1500 , name: '冰箱'},
+						{value: 1050, name: '洗衣机'},
+						{value: 900, name: '电脑'},
+						{value: 1200, name: '电视'},
+						{value: 590, name: '饮水机'},
+					],
+					value: '2016'
+				},
+				{
+					name:'销量',
+      				type: 'pie',
+      				radius: '20%',
+      				center: ['20%', '60%'],
+      				data: [
+						{value: 1200, name: '冰箱'},
+						{value: 850, name: '洗衣机'},
+						{value: 980, name: '电脑'},
+						{value: 960, name: '电视'},
+						{value: 1300, name: '饮水机'},
+					],
+      				encode: {
+       				 itemName: 'product',
+        			value: '2017'
+     			 	},
+     			},
+     			{
+                   name:'销量' ,
+                   type: 'pie',
+                   radius: '20%',
+     			   center: ['50%', '30%'],
+     			   data: [
+						{value: 1400, name: '冰箱'},
+						{value: 980, name: '洗衣机'},
+						{value: 788, name: '电脑'},
+						{value: 856, name: '电视'},
+						{value: 1405, name: '饮水机'},
+					],
+      			   encode: {
+        		   itemName: 'product',
+       			   value: '2018'
+     				},
+    			},
+    			{
+    				name:'销量',
+     				type: 'pie',
+     				radius: '20%',
+     				center: ['50%', '60%'],
+     				data: [
+						{value: 1200, name: '冰箱'},
+						{value: 950, name: '洗衣机'},
+						{value: 1068, name: '电脑'},
+						{value: 759, name: '电视'},
+						{value: 921, name: '饮水机'},
+					],
+      				encode: {
+      				itemName: 'product',
+       				value: '2019'
+      				},
+   				},
+   				{
+    				name:'销量',
+     				type: 'pie',
+     				radius: '20%',
+     				center: ['80%', '30%'],
+     				data: [
+						{value: 879, name: '冰箱'},
+						{value: 910, name: '洗衣机'},
+						{value: 1328, name: '电脑'},
+						{value: 1214, name: '电视'},
+						{value: 1021, name: '饮水机'},
+					],
+      				encode: {
+      				itemName: 'product',
+       				value: '2020'
+      				},
+   				},
+   				{
+    				name:'销量',
+     				type: 'pie',
+     				radius: '20%',
+     				center: ['80%', '60%'],
+     				data: [
+						{value: 956, name: '冰箱'},
+						{value: 940, name: '洗衣机'},
+						{value: 1088, name: '电脑'},
+						{value: 879, name: '电视'},
+						{value: 861, name: '饮水机'},
+					],
+      				encode: {
+      				itemName: 'product',
+       				value: '2021'
+      				},
+   				},
+			]
+		};
+		myChart.setOption(option);
+	</script>
+</html>
